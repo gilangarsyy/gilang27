@@ -1,0 +1,178 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    min-height: 100%;  
+}   
+
+body {
+  min-height: 100%;
+  font: 14px 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fef8d8, #e0f7fa);
+  color: #333;
+}
+
+/* KONTENER UTAMA */
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* HEADER / JUDUL */
+.judul {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #f4eccb;
+  color: #444;
+  border-bottom: 2px solid #e1d9a8;
+}
+
+.header {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #faf3e0;
+ 
+
+}
+
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #3b6fa0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.header a.active,
+.header a:hover {
+  background-color: #dbe9f4;
+  color: #2c5a84;
+}
+
+/* Efek underline animasi saat hover */
+.header a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #3b6fa0;
+  transition: width 0.3s ease;
+}
+
+.header a:hover::after {
+  width: 100%;
+}
+
+
+/* PROFIL - LAYOUT */
+.profile {
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* FOTO PROFIL */
+.profile-img {
+  flex: 0 0 200px;
+}
+
+.profile-img h2{
+  margin-bottom: 10PX;
+  font-size: 22px;
+  color: #3b6fa0;
+  position: relative;
+  left: 40px;
+  top: 0px;
+}
+
+
+.profile-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* INFO PROFIL */
+.profile-info {
+  flex: 1;
+}
+
+
+/* DAFTAR DATA DIRI */
+.data-diri {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.data-diri li {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.data-diri .label {
+  width: 180px;
+  font-weight: bold;
+  color: goldenrod;
+}
+
+.data-diri .separator {
+  width: 10px;
+  text-align: center;
+  color: #888;
+}
+
+.data-diri .value {
+  flex: 1;
+  color: #333;
+}
+
+
+/* animasi maasuk */
+.profile {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

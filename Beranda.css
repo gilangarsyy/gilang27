@@ -1,0 +1,182 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fef8d8, #e0f7fa);
+  color: #333;
+}
+
+/* KONTENER UTAMA */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* JUDUL */
+.judul {
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  background-color: #f4eccb;
+  color: #444;
+  border-bottom: 2px solid #e1d9a8;
+  font-weight: bold;
+}
+
+/* MENU */
+.header {
+  background-color: #faf3e0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.header li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #3b6fa0;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.header a:hover,
+.header a.active {
+  background-color: #dbe9f4;
+  color: #2c5a84;
+}
+
+/* FOTO */
+.foto-box {
+  width: 100%;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.foto-besar {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.foto-besar:hover {
+  transform: scale(1.015);
+}
+
+
+/* KONTEN */
+.beranda-content {
+  padding: 30px;
+}
+
+.beranda-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.beranda-content p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* FITUR UTAMA */
+.highlight-box {
+  background-color: #fff7d6;
+  border-left: 6px solid #f1c40f;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.highlight-box h3 {
+  color: #d35400;
+  margin-bottom: 10px;
+}
+
+.highlight-box ul {
+  padding-left: 20px;
+}
+
+.highlight-box li {
+  margin-bottom: 8px;
+}
+
+/* KUTIPAN */
+.quote {
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #c5e1f5;
+  border-radius: 6px;
+}
+
+/* TOMBOL */
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background-color: #388e3c;
+}
+
+
+
+
+
+/* animasi maasuk */
+.beranda-content {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

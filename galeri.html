@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="galeri.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <title>My Website</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="judul">WELCOME TO MY WEBSITE</h1>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="galeri.html" class="active">Galeri</a></li>
+        <li><a href="artikel.html">Artikel</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+      </ul>
+    </div>
+    <div class="galeri">
+      <div class="galeri-img">
+        <img src="img1_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img2_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img3_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img4_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img5_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img6_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img7_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img8_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img9_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img10_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img11_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img12_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img13_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img14_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img15_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img16_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img17_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img18_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img19_galeri.jpg" onclick="tampilPreview(this)">
+        <img src="img20_galeri.jpg" onclick="tampilPreview(this)">
+      </div>
+    </div>
+  </div>
+
+  <!-- Tambahan untuk preview gambar -->
+  <div id="overlay" class="overlay" onclick="tutupPreview()">
+    <img id="gambar-besar" class="gambar-preview" />
+  </div>
+
+  <script>
+    function tampilPreview(el) {
+      const overlay = document.getElementById('overlay');
+      const gambarBesar = document.getElementById('gambar-besar');
+      gambarBesar.src = el.src;
+      overlay.style.display = 'flex';
+    }
+
+    function tutupPreview() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

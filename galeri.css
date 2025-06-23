@@ -1,0 +1,162 @@
+/* RESET & DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    min-height: 100%;  
+}   
+
+body {
+  min-height: 100%;
+  font: 14px 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fef8d8, #e0f7fa);
+  color: #333;
+}
+
+/* KONTENER UTAMA */
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* HEADER / JUDUL */
+.judul {
+  font-size: 32px;
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #f4eccb;
+  color: #444;
+  border-bottom: 2px solid #e1d9a8;
+}
+
+.header {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: #faf3e0;
+ 
+
+}
+
+.header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #3b6fa0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.header a.active,
+.header a:hover {
+  background-color: #dbe9f4;
+  color: #2c5a84;
+}
+
+/* Efek underline animasi saat hover */
+.header a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #3b6fa0;
+  transition: width 0.3s ease;
+}
+
+.header a:hover::after {
+  width: 100%;
+}
+
+/* foto galeri */
+
+
+.galeri-img{
+  padding: 20px ;
+  flex: 1;
+  position: relative;
+  left: 25px;
+}
+
+.galeri-img img{
+
+  padding: 5px;
+  width: 140px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  right: 4px;
+}
+  
+
+/* Lightbox preview overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Gambar besar di preview */
+.gambar-preview {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Efek hover tetap */
+.galeri-img img {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.galeri-img img:hover {
+  transform: scale(1.05);
+}
+
+/* animasi maasuk */
+.galeri {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
